@@ -81,7 +81,7 @@ public static class NativeShare
 					for (int i = 0; i < filePaths.Length; i++)
 					{
 						//instantiate the object Uri with the parse of the url's file
-						using (AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject>("parse", "file://" + filePaths[i]))
+						using (AndroidJavaObject uriObject = uriClass.CallStatic<AndroidJavaObject>("parse", "file:///" + filePaths[i]))
 						{
 							uris.Call<bool>("add", uriObject);
 						}
